@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits Info & Order Form</title>
+   
+</head>
+<body>
+
+    <h1>Fruits Information & Order Page</h1>
+    <h2>Top 5 Healthy Fruits</h2>
+    <ul>
+        <li>Apple – Rich in fiber and vitamin C</li>
+        <li>Banana – Great source of potassium</li>
+        <li>Mango – Packed with vitamin A</li>
+    <h2>Fruit Price List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th>Price per Kg</th>
+                <th>Season</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>$3.50</td>
+                <td>Autumn</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$1.20</td>
+                <td>All Year</td>
+            </tr>
+            <tr>
+                <td>Mango</td>
+                <td>$4.00</td>
+                <td>Summer</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Fruit Gallery</h2>
+    <img src="https://images.pexels.com/photos/3084068/pexels-photo-3084068.jpeg" alt="Fresh Fruits Basket" width="500">
+    <p>Listen to our fruit salad song audio:</p>
+    <audio controls>
+        <source src="fruit.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p>Watch a short fruit farming video:</p>
+    <video controls width="500">
+        <source src="https://videos.pexels.com/video-files/5527139/5527139-uhd_1440_2560_24fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2>Fruit Order Form</h2>
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Customer Information</legend>
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required minlength="3">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+254712345678" pattern="^\+?\d{10,15}$" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Order Details</legend>
+
+            <label for="fruit">Select Fruit:</label>
+            <select id="fruit" name="fruit" required>
+                <option value="">--Choose a fruit--</option>
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="mango">Mango</option>
+            </select>
+
+            <label for="quantity">Quantity (Kg):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="50" required>
+
+            <label for="delivery-date">Preferred Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment & Preferences</legend>
+
+            <label>Payment Method:</label>
+            <input type="radio" id="mpesa" name="payment" value="mpesa" required>
+            <label for="mpesa">M-Pesa</label>
+            <input type="radio" id="card" name="payment" value="card">
+            <label for="card">Credit/Debit Card</label>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Any extra requests..."></textarea>
+        </fieldset>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+</body>
+</html>
